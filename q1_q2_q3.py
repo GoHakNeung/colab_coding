@@ -50,13 +50,13 @@ def bind_exercises(g, exercises, start=1, var_format='q{n}'):                   
     except ZeroDivisionError:
         value_per_problem = 1.0
 
-    for i, prob_cls in enumerate(exercises):
+    for i, prob_cls in enumerate(exercises):    # i는 숫자, prob_cls는 exercise에 있는 객체를 받아드림.  (enumerate가 그렇다는 이야기)  / 
         # A value of None is a placeholder. Reserve the corresponding question number, but don't create any corresponding Problem obj.
         if prob_cls is None:
             continue
         qno = i + start
         varname = var_format.format(n=qno)
-        assert varname not in g                                                            # g는 globals()로 생각됨 >> bind 모듈 확인해봐야함.
+        assert varname not in g                                                           \
         # TODO: Probably cleaner to just pass these as sublists, rather than having
         # the MultipartProblem class start in some nascent state and get 'activated' here
         if isinstance(prob_cls, MultipartProblem):      #prob_cls가 multipartproblem 의 클래스인지 확인
