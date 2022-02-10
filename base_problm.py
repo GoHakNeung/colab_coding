@@ -55,9 +55,10 @@ class d :
         self.d = 1
 
 prob_cls = []
-exercise = [a,b,c,d]
+exercise = [a,b,c,d]  #클래스를 리스트로 저장!
 
 for i,prob_cls in enumerate(exercise) : 
-    globals()['q'+str(i)] = prob_cls
+    globals()['q'+str(i)] = prob_cls  #globals()를 이용해서 동적객체(?) / 동적변수를 만든 형태로 객체를 만든다. 
+                                       #주의할 점은 q0 = a 이렇게 객체를 만들기에  (q0 = a()와 다름) 클래스 메소드를 만들 때 매개변수로 self 를 만들면 안된다. 
 
 q0.Print()
