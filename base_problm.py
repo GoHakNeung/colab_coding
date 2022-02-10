@@ -36,3 +36,28 @@ class question4(problem_chcek) :
     _solution = dict(a = 1, b = 2)
 
 list_class =([question1, question2, question3, question4])
+
+#globals()는 동적변수를 생성함. 이를 활용해서 동적 객체를 생성해야 함.
+
+class a : 
+    def __init__(self) : 
+        self.a = 1
+    def Print() : 
+        print('good')
+class b : 
+    def __init__(self) : 
+        self.b = 1
+class c : 
+    def __init__(self) : 
+        self.c = 1
+class d : 
+    def __init__(self) : 
+        self.d = 1
+
+prob_cls = []
+exercise = [a,b,c,d]
+
+for i,prob_cls in enumerate(exercise) : 
+    globals()['q'+str(i)] = prob_cls
+
+q0.Print()
