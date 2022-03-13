@@ -15,7 +15,7 @@ def solution_entry() :
 class variable() : 
   def check() : 
     bag = '수학책'
-    print(c.bc_gray,"bag = '수학책'\nprint(bag)",c.reset)
+    print(c.bc_gray,"bag = '수학책'        \nprint(bag)          ",c.reset)
     print('\npring(bag) 결과입니다.')
     print(bag)
 
