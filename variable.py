@@ -1,6 +1,6 @@
 
 from IPython.display import IFrame
-import color_output as c
+from study_python import color_output as c
 
 def question_entry() : 
   url_question = ['https://playentry.org/ws/62285c5c096ca500fe6104aa']
