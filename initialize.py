@@ -1,4 +1,8 @@
+from IPython.display import display, Markdown, HTML
+
 def start() : 
-    from IPython.display import display, HTML
     display(HTML("<style>.container { width:80% !important; }</style>"))
-    import color_output
+
+def color_text(text, color, add_ = ' '):
+    infomation = '<span style="color:{}">{}</span> {}' .format(color, text, add_)
+    return display(Markdown(infomation))
